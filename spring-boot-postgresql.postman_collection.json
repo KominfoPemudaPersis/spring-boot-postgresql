@@ -1,0 +1,169 @@
+{
+  "info": {
+    "_postman_id": "a8027a88-b78c-405e-b22c-7b14bad12411",
+    "name": "spring-boot-postgresql",
+    "description": "Spring Boot Postgresql API Collections",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Add New Question",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\t\"title\" : \"How to use PostgreSQL using Spring Boot Data JPA?\",\n\t\"description\" : \"I want to use PostgreSQL with Spring Boot Data JPA and develop RESTful APIs. Please help!\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/questions",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "questions"
+          ]
+        },
+        "description": "Add New Question API"
+      },
+      "response": []
+    },
+    {
+      "name": "Get paginated Questions",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\t\"title\" : \"How to use PostgreSQL using Spring Boot Data JPA?\",\n\t\"description\" : \"I want to use PostgreSQL with Spring Boot Data JPA and develop RESTful APIs. Please help!\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/questions?page=0&size=2&sort=createdAt,desc",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "questions"
+          ],
+          "query": [
+            {
+              "key": "page",
+              "value": "0"
+            },
+            {
+              "key": "size",
+              "value": "2"
+            },
+            {
+              "key": "sort",
+              "value": "createdAt,desc"
+            }
+          ]
+        },
+        "description": "Get paginated Questions API"
+      },
+      "response": []
+    },
+    {
+      "name": "Create Answer",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\t\"text\" : \"It's very easy to configure PostgreSQL in Spring Boot App. Bla bla bla bla\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/questions/1000/answers",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "questions",
+            "1000",
+            "answers"
+          ]
+        },
+        "description": "Create Answer Questions API"
+      },
+      "response": []
+    },
+    {
+      "name": "Get all answers of a Question",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\t\"text\" : \"It's very easy to configure PostgreSQL in Spring Boot App. Bla bla bla bla\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/questions/1000/answers",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "questions",
+            "1000",
+            "answers"
+          ]
+        },
+        "description": "Get all answers of a Question API"
+      },
+      "response": []
+    }
+  ]
+}
