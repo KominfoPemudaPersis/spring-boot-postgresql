@@ -22,6 +22,26 @@ mvn clean package
 java -jar target/spring-boot-postgresql-0.0.1-SNAPSHOT.jar
 ```
 
+The application will start on the default port 8080.
+
+The following screenshots show you how to test the APIs using Postman.
+
+__1. Create Question `POST /questions`__
+
+![Create Question POST /questions](img/add.png "Create Question POST /questions")
+
+__2. Get paginated Questions `GET /questions?page=0&size=2&sort=createdAt,desc`__
+
+![Get paginated Questions GET /questions?page=0&size=2&sort=createdAt,desc](img/paginasi.png "Get paginated Questions GET /questions?page=0&size=2&sort=createdAt,desc")
+
+__3. Create Answer `POST /questions/{questionId}/answers`__
+
+![Create Answer POST /questions/{questionId}/answers](img/answer.png "Create Answer POST /questions/{questionId}/answers")
+
+__4. Get all answers of a Question `GET /questions/{questionId}/answers`__
+
+![Get all answers of a Question GET /questions/{questionId}/answers](img/all.png "Get all answers of a Question GET /questions/{questionId}/answers")
+
 This project is based on a GitLab [Project Template](https://docs.gitlab.com/ee/gitlab-basics/create-project.html).
 
 Improvements can be proposed in the [original project](https://gitlab.com/gitlab-org/project-templates/spring).
